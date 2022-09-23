@@ -4,8 +4,8 @@
  * @brief Scanning an array
  * 
  * @param arr two-dimentional array of integer
- * @param n1 number of strings
- * @param n2 number of columns
+ * @param n1 integer number of strings
+ * @param n2 integer number of columns
  */
 void scan_arr(int arr[][10], int n1, int n2)
 {
@@ -18,8 +18,8 @@ void scan_arr(int arr[][10], int n1, int n2)
  * @brief Transposing an array 
  * 
  * @param arr two-dimentional array of integer
- * @param n1 pointer number of strings
- * @param n2 pointer number of columns
+ * @param n1 pointer to integer value - number of strings
+ * @param n2 pointer to integer value - number of columns
  */
 void transpose_arr(int arr[][10], int *n1, int *n2)
 {
@@ -42,8 +42,8 @@ void transpose_arr(int arr[][10], int *n1, int *n2)
  * @brief Printing an array
  * 
  * @param arr two-dimentional array of integer
- * @param n1 number of strings
- * @param n2 number of columns
+ * @param n1 integer number of strings
+ * @param n2 integer number of columns
  */
 void print_arr(int arr[][10], int n1, int n2)
 {
