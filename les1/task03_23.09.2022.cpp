@@ -60,13 +60,14 @@ void print_arr(int arr[][10], int n1, int n2)
 int main()
 {
     int arr[10][10] = {0};
-    int n = 0;
+    int n1 = 0;
+    int n2 = 0;
     
-    scanf("%d", &n);
+    scanf("%d%d", &n1, &n2);
 
-    scan_arr(arr, n, n);
-    transpose_arr(arr, &n, &n);
-    print_arr(arr, n, n);
+    scan_arr(arr, n1, n2);
+    transpose_arr(arr, &n1, &n2);
+    print_arr(arr, n1, n2);
    
     return 0;
 }
