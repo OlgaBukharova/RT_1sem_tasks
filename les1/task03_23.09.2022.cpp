@@ -3,7 +3,7 @@
 /**
  * @brief Scanning an array
  * 
- * @param arr two-dimentional array of integer
+ * @param arr two-dimentional array of integer 
  * @param n1 integer number of strings
  * @param n2 integer number of columns
  */
