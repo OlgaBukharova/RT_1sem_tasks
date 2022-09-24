@@ -5,7 +5,6 @@
  * 
  * @param arr two-dimentional array of integer
  * @param n1 integer number of strings
- * @param n2 integer number of columns
  */
 void scan_arr(int arr[][2], int n1)
 {
