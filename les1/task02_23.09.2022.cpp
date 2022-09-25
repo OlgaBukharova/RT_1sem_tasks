@@ -25,6 +25,10 @@ void transpose_arr(int arr[][10], int *n1, int *n2)
 {
     int tmp = 0;
 
+    tmp = *n1;
+    *n1 = *n2;
+    *n2 = tmp;
+
     for (int i = 0; i < *n1; i++)
         for (int j = i + 1; j < *n2; j++)
         {
@@ -32,10 +36,6 @@ void transpose_arr(int arr[][10], int *n1, int *n2)
                 arr[i][j] = arr[j][i];
                 arr[j][i] = tmp;
         }
-    
-    tmp = *n1;
-    *n1 = *n2;
-    *n2 = tmp;
 }
 
 /**
