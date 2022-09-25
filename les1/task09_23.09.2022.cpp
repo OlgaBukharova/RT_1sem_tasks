@@ -27,7 +27,7 @@ void buble_sort2(int arr[][2], int size)
     for (int i = 0; i < size; i++)
         for (int j = i; j < size; j++)
         {
-            if (arr[i] > arr[j])
+            if (arr[i][1] > arr[j][1])
             {
                 tmp = arr[i][1];
                 arr[i][1] = arr[j][1];
