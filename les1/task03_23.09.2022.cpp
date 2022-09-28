@@ -23,19 +23,25 @@ void scan_arr(int arr[][10], int n1, int n2)
  */
 void transpose_arr(int arr[][10], int *n1, int *n2)
 {
+    int n = 0;
     int tmp = 0;
 
-    tmp = *n1;
-    *n1 = *n2;
-    *n2 = tmp;
+    if (*n1 <= *n2)
+        n = *n2;
+    else 
+        n = *n1;
 
-    for (int i = 0; i < *n1; i++)
-        for (int j = i + 1; j < *n2; j++)
+    for (int i = 0; i < n; i++)
+        for (int j = i; j < n; j++)
         {
                 tmp = arr[i][j];
                 arr[i][j] = arr[j][i];
                 arr[j][i] = tmp;
         }
+    
+    tmp = *n1;
+    *n1 = *n2;
+    *n2 = tmp;
 }
 
 /**
