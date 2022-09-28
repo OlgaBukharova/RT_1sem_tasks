@@ -4,33 +4,27 @@
  * @brief Scanning an array
  * 
  * @param arr two-dimentional array of integer 
- * @param n1 integer number of strings
- * @param n2 integer number of columns
+ * @param n integer number of strings/columns
  */
-void scan_arr(int arr[][10], int n1, int n2)
+void scan_arr(int arr[][10], int n)
 {
-    for (int i = 0; i < n1; i++)
-        for (int j = 0; j < n2; j++)
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
             scanf("%d", &arr[i][j]);
 }
 
 /**
- * @brief Transposing an array 
+ * @brief Transposing an array n*n
  * 
  * @param arr two-dimentional array of integer
- * @param n1 pointer to integer value - number of strings
- * @param n2 pointer to integer value - number of columns
+ * @param n pointer to integer value - number of strings/columns
  */
-void transpose_arr(int arr[][10], int *n1, int *n2)
+void transpose_arr(int arr[][10], int n)
 {
     int tmp = 0;
 
-    tmp = *n1;
-    *n1 = *n2;
-    *n2 = tmp;
-
-    for (int i = 0; i < *n1; i++)
-        for (int j = i + 1; j < *n2; j++)
+    for (int i = 0; i < n; i++)
+        for (int j = i; j < n; j++)
         {
                 tmp = arr[i][j];
                 arr[i][j] = arr[j][i];
@@ -45,14 +39,14 @@ void transpose_arr(int arr[][10], int *n1, int *n2)
  * @param n1 integer number of strings
  * @param n2 integer number of columns
  */
-void print_arr(int arr[][10], int n1, int n2)
+void print_arr(int arr[][10], int n)
 {
-    for (int i = 0; i < n1; i++)
-        for (int j = 0; j < n2; j++)
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
             {
                 printf("%d\t", arr[i][j]);
 
-                if (j == n2 - 1)
+                if (j == n - 1)
                     printf("\n");
             }
 }
@@ -64,9 +58,9 @@ int main()
     
     scanf("%d", &n);
 
-    scan_arr(arr, n, n);
-    transpose_arr(arr, &n, &n);
-    print_arr(arr, n, n);
+    scan_arr(arr, n);
+    transpose_arr(arr, n);
+    print_arr(arr, n);
    
     return 0;
 }
