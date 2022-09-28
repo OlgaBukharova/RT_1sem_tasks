@@ -36,8 +36,7 @@ void transpose_arr(int arr[][10], int n)
  * @brief Printing an array
  * 
  * @param arr two-dimentional array of integer
- * @param n1 integer number of strings
- * @param n2 integer number of columns
+ * @param n integer number of strings/columns
  */
 void print_arr(int arr[][10], int n)
 {
