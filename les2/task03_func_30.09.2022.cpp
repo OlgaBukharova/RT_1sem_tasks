@@ -4,9 +4,7 @@ unsigned int sum_of_numbers(unsigned int n)
     n *= 10;
 
     while (n /= 10)
-    {
         summ += n % 10;
-    }
     
     return summ;
 }
